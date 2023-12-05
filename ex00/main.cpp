@@ -6,12 +6,11 @@
 /*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 16:01:20 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/11/29 16:39:16 by cgodecke         ###   ########.fr       */
+/*   Updated: 2023/12/05 13:49:15 by cgodecke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "whatever.hpp"
-
 
 int main( void ) {
 	int a = 2;

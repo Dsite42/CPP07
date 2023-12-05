@@ -6,7 +6,7 @@
 /*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 16:00:35 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/12/05 13:44:02 by cgodecke         ###   ########.fr       */
+/*   Updated: 2023/12/05 13:48:56 by cgodecke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ void swap(T &a, T &b)
 template<typename T>
 T min(const T &a, const T &b)
 {
-	// NULL check?
 	if (a < b)
 		return (a);
 	else

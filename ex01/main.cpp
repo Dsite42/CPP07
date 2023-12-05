@@ -6,7 +6,7 @@
 /*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 16:01:20 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/12/01 15:04:15 by cgodecke         ###   ########.fr       */
+/*   Updated: 2023/12/05 14:08:03 by cgodecke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ int main( void )
 	::iter(str_arr, 3, to_upper);
 	for (int i = 0; i < 3; i++)
 		std::cout << str_arr[i] << std::endl;
-
 
 	return 0;
 }
