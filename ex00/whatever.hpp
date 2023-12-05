@@ -6,7 +6,7 @@
 /*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 16:00:35 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/11/29 16:39:11 by cgodecke         ###   ########.fr       */
+/*   Updated: 2023/12/05 13:44:02 by cgodecke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,24 +24,20 @@ void swap(T &a, T &b)
 }
 
 template<typename T>
-T min(T &a, T &b)
+T min(const T &a, const T &b)
 {
 	// NULL check?
 	if (a < b)
 		return (a);
-	else if (b < a)
-		return (b);
 	else
 		return (b);
 }
 
 template<typename T>
-T max(T &a, T &b)
+T max(const T &a, const T &b)
 {
 	if (a > b)
 		return (a);
-	else if (b > a)
-		return (b);
 	else
 		return (b);
 }
