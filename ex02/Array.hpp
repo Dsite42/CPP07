@@ -6,7 +6,7 @@
 /*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 16:40:26 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/12/01 19:05:18 by cgodecke         ###   ########.fr       */
+/*   Updated: 2023/12/05 16:41:19 by cgodecke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,15 +41,18 @@ class Array
 };
 
 template <typename T>
-Array<T>::Array() : _arr(NULL), _size(0) {}
+Array<T>::Array() : _arr(NULL), _size(0)
+{}
 
 template <typename T>
-Array<T>::Array(unsigned int n) : _arr(new T[n]), _size(n) {}
+Array<T>::Array(unsigned int n) : _arr(new T[n]), _size(n)
+{}
 
 template <typename T>
-Array<T>::Array(Array const &copy)
+Array<T>::Array(Array const &copy) : _arr(new T[copy._size]), _size(copy._size)
 {
-	*this = copy;
+	for (unsigned int i = 0; i < _size; i++)
+		_arr[i] = copy._arr[i];
 }
 
 template <typename T>

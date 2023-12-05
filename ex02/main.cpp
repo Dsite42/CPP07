@@ -6,7 +6,7 @@
 /*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 16:01:20 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/12/01 19:05:39 by cgodecke         ###   ########.fr       */
+/*   Updated: 2023/12/05 16:42:57 by cgodecke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,19 @@
 #include <cstdlib>
 
 #define MAX_VAL 750
-
 int main(int, char**)
 {
+    /*
+    // tip from subject
+    int * a = new int();
+    std::cout << *a << std::endl;
+    
+    // create with parameter
+    Array<int> numbers(MAX_VAL);
+    numbers[0] = 42;
+    std::cout << numbers[0] << std::endl;
+    */
+   
     Array<int> numbers(MAX_VAL);
     int* mirror = new int[MAX_VAL];
     srand(time(NULL));
@@ -46,11 +56,10 @@ int main(int, char**)
     {
         numbers[-2] = 0;
     }
-	catch(const Array<int>::OutOfBoundsException& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
-	
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
     try
     {
         numbers[MAX_VAL] = 0;
@@ -65,5 +74,7 @@ int main(int, char**)
         numbers[i] = rand();
     }
     delete [] mirror;//
+
+
     return 0;
 }
