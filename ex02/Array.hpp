@@ -6,7 +6,7 @@
 /*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 16:40:26 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/12/07 12:34:10 by cgodecke         ###   ########.fr       */
+/*   Updated: 2023/12/07 13:50:40 by cgodecke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ class Array
 		// Operators
 		Array			&operator=(Array const &copy);
 		T				&operator[](unsigned int i);
+		T const			&operator[](unsigned int i) const;
 
 		// Methods
 		unsigned int	size() const;

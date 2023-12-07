@@ -6,12 +6,12 @@
 #    By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/18 15:39:27 by cgodecke          #+#    #+#              #
-#    Updated: 2023/12/05 14:18:43 by cgodecke         ###   ########.fr        #
+#    Updated: 2023/12/07 13:30:34 by cgodecke         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 C++ = c++
-C++_FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -g -fsanitize=address
+C++_FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic #-g -fsanitize=address
 INFILES = 	main.cpp\
 
 OBJFILES = $(INFILES:.cpp=.o)

@@ -6,7 +6,7 @@
 /*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 16:01:20 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/12/07 12:58:22 by cgodecke         ###   ########.fr       */
+/*   Updated: 2023/12/07 13:53:28 by cgodecke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,19 @@
 
 int main(int, char**)
 {
+	std::cout << "\033[33m" << std::endl << "Empty Array" << "\033[0m" << std::endl;
+	Array<int> emptyArray;
+	std::cout << "emptyArray size: " << emptyArray.size() << std::endl;
+	
+	
+	std::cout << "\033[33m" << std::endl << "Out of Bounce" << "\033[0m" << std::endl;
+	try {
+		std::cout << "emptyArray[5]: " << emptyArray[5] << std::endl;
+	}
+	catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+
 	std::cout << "\033[33m" << std::endl << "Int Array" << "\033[0m" << std::endl;
 	Array<int> intArray(5);
 	int i = 0;
@@ -71,6 +84,18 @@ int main(int, char**)
         i++;
     }
     std::cout << std::endl;
+
+
+    std::cout << "\033[33m" << std::endl << "Const Instance" << "\033[0m" << std::endl;
+	const Array<int> constIntArray(intArray);
+	std::cout << "constIntArray size: " << constIntArray.size() << std::endl;
+	std::cout << "constIntArray: ";
+	i = 0;
+	while (i < 5) {
+		std::cout << constIntArray[i] << " ";
+		i++;
+	}
+	std::cout << std::endl;
 
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 11:47:18 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/12/07 12:46:41 by cgodecke         ###   ########.fr       */
+/*   Updated: 2023/12/07 13:50:33 by cgodecke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,14 @@ Array<T> &Array<T>::operator=(Array const &copy)
 
 template <typename T>
 T &Array<T>::operator[](unsigned int i)
+{
+	if (i >= _size)
+		throw OutOfBoundsException();
+	return (_arr[i]);
+}
+
+template <typename T>
+T const &Array<T>::operator[](unsigned int i) const
 {
 	if (i >= _size)
 		throw OutOfBoundsException();
