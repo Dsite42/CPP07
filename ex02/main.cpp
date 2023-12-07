@@ -1,17 +1,11 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/29 16:01:20 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/12/07 13:53:28 by cgodecke         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <iostream>
 #include "Array.hpp"
+
+// Struct for test "Complex Array Type from own struct"
+struct s_test {
+	int a;
+	char b;
+};
 
 int main(int, char**)
 {
@@ -93,6 +87,24 @@ int main(int, char**)
 	i = 0;
 	while (i < 5) {
 		std::cout << constIntArray[i] << " ";
+		i++;
+	}
+	std::cout << std::endl;
+
+
+    std::cout << "\033[33m" << std::endl << "Complex Array Type from own struct" << "\033[0m" << std::endl;
+	Array<s_test> structArray(6);
+	i = 0;
+	while (i < 6) {
+		structArray[i].a = i;
+		structArray[i].b = 'a' + i;
+		i++;
+	}
+	std::cout << "structArray size: " << structArray.size() << std::endl;
+	std::cout << "structArray: ";
+	i = 0;
+	while (i < 6) {
+		std::cout << structArray[i].a << structArray[i].b << " ";
 		i++;
 	}
 	std::cout << std::endl;
